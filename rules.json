@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.youtube.com/"
+      }
+    },
+    "condition": {
+      "urlFilter": "*://*.youtube.com/shorts/*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

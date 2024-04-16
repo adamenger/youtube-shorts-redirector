@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Redirector",
+  "version": "1.0",
+  "description": "Redirect YouTube Shorts to YouTube main page",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+ "host_permissions": ["*://*.youtube.com/*"],
+ "background": {
+    "service_worker": "background.js"
+  },
+ "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
